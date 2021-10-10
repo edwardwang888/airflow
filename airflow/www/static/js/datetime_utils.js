@@ -45,7 +45,7 @@ export function isoDateToTimeEl(datetime, options) {
   if (addTitle) {
     el.setAttribute('title', dateTimeObj.isUTC() ? '' : `UTC: ${dateTimeObj.clone().utc().format()}`);
   }
-  el.innerText = dateTimeObj.format(defaultFormat);
+  el.innerText = dateTimeObj.format(defaultFormatWithTZ);
   return el;
 }
 
